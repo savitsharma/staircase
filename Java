@@ -1,0 +1,28 @@
+package cf.java.pattern;
+import java.util.Scanner;
+
+public class RealStaircasePattern {
+
+	public static void main(String[] args) {
+		// Declare all varibales
+		int noOfLines, k;
+		// Use Scanner to accept no of lines pattern
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter no of lines for pattern you want: ");
+		noOfLines = sc.nextInt();
+		// Display left staircase pattern
+		System.out.println("Real Staircase Pattern:");
+		for (int i = 0; i <= noOfLines; i++) {
+			// Check whether value of i is even or not
+			if (i % 2 != 0)
+				k = i + 1;
+			else
+				k = i;
+			for (int j = 0; j < k; j++)
+				System.out.print("# ");
+			System.out.println();
+		}
+
+	}
+
+}
